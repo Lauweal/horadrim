@@ -1,0 +1,43 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/css-loader@6.11.0_webpack@5.99.5/node_modules/css-loader/dist/cjs.js!../../node_modules/.pnpm/less-loader@11.1.4_less@4.3.0_webpack@5.99.5/node_modules/less-loader/dist/cjs.js!../../packages/components/es/style/index.less ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+:root {
+  --horadrim-transition_duration-slowest: 0ms;
+  --horadrim-transition_duration-start: 0.1ms
+}
+
+body,
+body[theme-mode=dark] {
+  --horadrim-primary: #63cf77;
+  --horadrim-primary-active: #63cf7799
+}
+
+:root {
+  --horadrim-font-size-0: 10;
+  --horadrim-font-size-1: 12;
+  --horadrim-font-size-2: 14;
+  --horadrim-font-size-3: 18;
+  --horadrim-font-size-4: 24;
+  --horadrim-font-size-5: 36;
+  --horadrim-border-radius-0: 4;
+  --horadrim-border-radius-1: 8;
+  --horadrim-border-radius-2: 12;
+  --horadrim-border-radius-3: 18
+}
+
+.horadrim-button-root,
+.horadrim-input-root {
+  background-color: var(--horadrim-primary);
+  font-size: 12
+}
+
+/*!******************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/css-loader@6.11.0_webpack@5.99.5/node_modules/css-loader/dist/cjs.js!../../node_modules/.pnpm/less-loader@11.1.4_less@4.3.0_webpack@5.99.5/node_modules/less-loader/dist/cjs.js!./src/styles/app.less ***!
+  \******************************************************************************************************************************************************************************************************************************************/
+.app {
+  text-align: center
+}
+
+.app h1 {
+  color: #3498db
+}
