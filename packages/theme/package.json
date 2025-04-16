@@ -1,0 +1,21 @@
+{
+  "name": "@horadrim/theme",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "liuwei <lemonpaimc@126.com>",
+  "homepage": "",
+  "license": "MIT",
+  "directories": {
+    "lib": "less",
+    "test": "__tests__"
+  },
+  "files": [
+    "less"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+  },
+  "scripts": {
+    "test": "node ./__tests__/theme.test.js"
+  }
+}

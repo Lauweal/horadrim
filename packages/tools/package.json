@@ -1,0 +1,22 @@
+{
+  "name": "@horadrim/tools",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "liuwei <lemonpaimc@126.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "lib/tools.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+  },
+  "scripts": {
+    "test": "node ./__tests__/tools.test.js"
+  }
+}
