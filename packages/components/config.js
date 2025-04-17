@@ -1,11 +1,11 @@
-module.exports = ({ isESM }) => {
+module.exports = ({ modules }) => {
     return {
         presets: [
             '@babel/preset-react',
             [
                 '@babel/preset-env',
                 {
-                    modules: isESM ? false : 'commonjs',
+                    modules,
                     targets: {
                         browsers: [
                             "> 0.5%",

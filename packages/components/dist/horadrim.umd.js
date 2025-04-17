@@ -1,0 +1,2 @@
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports,require("react")):"function"==typeof define&&define.amd?define(["exports","react"],t):t((e="undefined"!=typeof globalThis?globalThis:e||self).horadrim={},e.React)}(this,(function(e,t){"use strict";e.Button=function(){return t.createElement("div",{className:"horadrim-button-root"},"button")},e.Input=function(){return t.createElement("div",{className:"input-root"},"1")}}));
+//# sourceMappingURL=horadrim.umd.js.map

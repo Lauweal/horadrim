@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Button() {
-    return (<div className="nephalem-button-root">button</div>)
+    return (<div className="horadrim-button-root">button</div>)
 }
