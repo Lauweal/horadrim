@@ -5,18 +5,19 @@
   "author": "liuwei <lemonpaimc@126.com>",
   "homepage": "",
   "license": "MIT",
-  "main": "lib/tools.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "directories": {
-    "lib": "lib",
+    "lib": "dist",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "publishConfig": {
     "registry": "https://registry.npmmirror.com/"
   },
   "scripts": {
-    "test": "node ./__tests__/tools.test.js"
+    "build": "tsc"
   }
 }
