@@ -15,8 +15,8 @@
       "es2017"
     ],
     "paths": {
-      "@component/*": [
-        "src/*"
+      "@horadrim/components": [
+        "./src/index.ts"
       ]
     }
   },

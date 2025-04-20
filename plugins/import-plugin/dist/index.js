@@ -41,17 +41,22 @@ const parser_1 = require("@babel/parser");
 const traverse_1 = __importDefault(require("@babel/traverse"));
 const generator_1 = __importDefault(require("@babel/generator"));
 const t = __importStar(require("@babel/types"));
+function isFunction(value) {
+    return typeof value === "function";
+}
 function viteImportPlugin(options) {
-    const { libraryName, libraryDirectory = 'lib', style = false } = options;
+    const { libraryName, libraryDirectory = "lib", style = false } = options;
+    console.log('libraryName >>>>> 1', libraryName, libraryDirectory);
     return {
-        name: 'vite-import-plugin',
+        name: "vite-import-plugin",
         transform(code, id) {
-            if (!id.endsWith('.js') && !id.endsWith('.ts') && !id.endsWith('.tsx')) {
+            console.log('libraryName >>>>> 2', libraryName, libraryDirectory, id);
+            if (!id.endsWith(".js") && !id.endsWith(".ts") && !id.endsWith(".tsx")) {
                 return null;
             }
             const ast = (0, parser_1.parse)(code, {
-                sourceType: 'module',
-                plugins: ['typescript', 'jsx'],
+                sourceType: "module",
+                plugins: ["typescript", "jsx"],
             });
             let transformed = false;
             (0, traverse_1.default)(ast, {
@@ -71,10 +76,18 @@ function viteImportPlugin(options) {
                                 newImports.push(t.importDeclaration([t.importDefaultSpecifier(t.identifier(localName))], t.stringLiteral(importPath)));
                                 // 如果需要引入样式
                                 if (style) {
-                                    const stylePath = typeof style === 'string'
-                                        ? `${libraryName}/${libraryDirectory}/${importedName}/style/index.${style}`
-                                        : `${libraryName}/${libraryDirectory}/${importedName}/style`;
-                                    newImports.push(t.importDeclaration([], t.stringLiteral(stylePath)));
+                                    if (isFunction(style)) {
+                                        const stylePath = style(importedName);
+                                        if (stylePath) {
+                                            newImports.push(t.importDeclaration([], t.stringLiteral(stylePath)));
+                                        }
+                                    }
+                                    else {
+                                        const stylePath = typeof style === "string"
+                                            ? `${libraryName}/${libraryDirectory}/${importedName}/style/index.${style}`
+                                            : `${libraryName}/${libraryDirectory}/${importedName}/style`;
+                                        newImports.push(t.importDeclaration([], t.stringLiteral(stylePath)));
+                                    }
                                 }
                             }
                         });

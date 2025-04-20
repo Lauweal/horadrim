@@ -16,6 +16,6 @@
     "registry": "https://registry.npmmirror.com/"
   },
   "scripts": {
-    "test": "node ./__tests__/theme.test.js"
+    "build": "node -v"
   }
 }

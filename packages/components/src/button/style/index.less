@@ -1,6 +1,39 @@
 @import "@horadrim/theme/less/index.less";
 
-.@{prefix}-button-root {
-    background-color: ~"var(--@{prefix}-primary)"; // 修复动态变量拼接
-    font-size: @font-size-1;
+
+.button-root {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    transition: all 0.2s ease;
+    border: none;
+    &-small {
+        border-radius:~"var(--@{prefix}-border-radius-1)";
+        padding: @space-0 @space-2;
+        font-size: @font-size-1;
+    }
+    &-medium {
+        border-radius:~"var(--@{prefix}-border-radius-1)";
+        padding: @space-0 @space-3;
+        font-size: @font-size-2;
+    }
+    &-large {
+        border-radius:~"var(--@{prefix}-border-radius-1)";
+        padding: @space-1 @space-4;
+        font-size: @font-size-3;
+    }
+    &-primary {
+        background-color:~"var(--@{prefix}-primary)";
+        color:~"var(--@{prefix}-textcolor-flip)";
+        &:hover {
+            filter: brightness(140%);
+        }
+        &:active {
+            filter: brightness(80%);
+        }
+    }
 }

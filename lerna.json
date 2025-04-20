@@ -5,7 +5,7 @@
   "npmClient": "pnpm",
   "packages": [
     "packages/*",
-    "packages/plugins/*"
+    "plugins/*"
   ],
   "command": {
     "publish": {

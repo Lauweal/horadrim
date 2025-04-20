@@ -1,0 +1,36 @@
+{
+  "name": "@horadrim/vite-plugin-import",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "fred <lemonpaimc@126.com>",
+  "homepage": "https://github.com/Lauweal/horadrim#readme",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "lib": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lauweal/horadrim.git"
+  },
+  "scripts": {
+    "build:plugins": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/Lauweal/horadrim/issues"
+  },
+  "devDependencies": {
+    "@babel/generator": "^7.27.0",
+    "@babel/parser": "^7.27.0",
+    "@babel/traverse": "^7.27.0",
+    "@babel/types": "^7.27.0",
+    "@types/babel__generator": "^7.27.0",
+    "@types/babel__traverse": "^7.20.7"
+  }
+}
